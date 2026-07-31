@@ -1,0 +1,25 @@
+name: Architecture question
+description: A source fact contradicts accepted architecture, or a decision gap was found
+labels: ["architecture-question", "needs-architect"]
+body:
+  - type: textarea
+    id: fact
+    attributes: { label: Discovered source fact, description: With metadata block and citation }
+    validations: { required: true }
+  - type: textarea
+    id: contradiction
+    attributes: { label: What it contradicts, description: ADR / pack section / issue assumption }
+    validations: { required: true }
+  - type: textarea
+    id: stopped
+    attributes: { label: Work stopped, description: Exactly which portion is paused; what continues }
+    validations: { required: true }
+  - type: textarea
+    id: verification
+    attributes: { label: Independent verification, description: Filled by Codex during review }
+  - type: textarea
+    id: options
+    attributes: { label: Options and trade-offs, description: Filled by Fable 5 }
+  - type: textarea
+    id: decision
+    attributes: { label: Human decision + ADR amendment link, description: Filled by the human owner }

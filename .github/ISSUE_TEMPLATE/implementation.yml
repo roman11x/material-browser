@@ -1,0 +1,41 @@
+name: Implementation issue
+description: A scoped implementation task for Claude Code
+labels: ["implementation", "needs-approval"]
+body:
+  - type: input
+    id: objective
+    attributes: { label: Objective, description: One sentence; outcome, not activity }
+    validations: { required: true }
+  - type: textarea
+    id: arch-refs
+    attributes: { label: Architecture references, description: "ADRs, pack sections, spike docs this work must conform to" }
+    validations: { required: true }
+  - type: textarea
+    id: scope
+    attributes: { label: In scope }
+    validations: { required: true }
+  - type: textarea
+    id: non-goals
+    attributes: { label: Out of scope / non-goals }
+    validations: { required: true }
+  - type: textarea
+    id: files-and-inputs
+    attributes: { label: "Files/subsystems and human-provided inputs", description: "Part 1 — files/subsystems expected to be touched or investigated. Part 2 — human-provided inputs that must exist before work starts." }
+  - type: textarea
+    id: acceptance
+    attributes: { label: Acceptance criteria, description: Checkbox list; each must be evidenceable }
+    validations: { required: true }
+  - type: textarea
+    id: evidence
+    attributes: { label: Required test evidence, description: Commands/tests whose real output the PR must include }
+    validations: { required: true }
+  - type: textarea
+    id: pr-boundaries
+    attributes: { label: PR boundaries, description: One PR unless stated; what splits are allowed }
+  - type: textarea
+    id: review-and-escalation
+    attributes: { label: "Codex review focus and architecture escalation", description: "Part 1 — where Codex should concentrate its review. Part 2 — conditions that require an architecture-question escalation." }
+  - type: dropdown
+    id: dependencies-met
+    attributes: { label: "Dependencies closed?", options: ["yes", "no — list in comment"] }
+    validations: { required: true }
