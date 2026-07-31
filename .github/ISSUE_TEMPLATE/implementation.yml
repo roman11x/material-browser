@@ -19,8 +19,8 @@ body:
     attributes: { label: Out of scope / non-goals }
     validations: { required: true }
   - type: textarea
-    id: files
-    attributes: { label: Files/subsystems expected to be touched or investigated }
+    id: files-and-inputs
+    attributes: { label: "Files/subsystems and human-provided inputs", description: "Part 1 — files/subsystems expected to be touched or investigated. Part 2 — human-provided inputs that must exist before work starts." }
   - type: textarea
     id: acceptance
     attributes: { label: Acceptance criteria, description: Checkbox list; each must be evidenceable }
@@ -33,14 +33,8 @@ body:
     id: pr-boundaries
     attributes: { label: PR boundaries, description: One PR unless stated; what splits are allowed }
   - type: textarea
-    id: review-focus
-    attributes: { label: Codex review focus }
-  - type: textarea
-    id: escalation
-    attributes: { label: Conditions requiring architecture escalation }
-  - type: textarea
-    id: inputs
-    attributes: { label: Human-provided inputs, description: Must exist before work starts }
+    id: review-and-escalation
+    attributes: { label: "Codex review focus and architecture escalation", description: "Part 1 — where Codex should concentrate its review. Part 2 — conditions that require an architecture-question escalation." }
   - type: dropdown
     id: dependencies-met
     attributes: { label: "Dependencies closed?", options: ["yes", "no — list in comment"] }
