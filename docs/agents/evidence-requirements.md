@@ -5,12 +5,22 @@ Repository / Branch / Commit / Firefox version (version.txt + version_display.tx
 Date inspected / Artifact or full build / Relevant feature preferences.
 One block per branch when comparing.
 
-## Baseline verification (local)
+## Repository verification (every issue, before editing)
+`git branch --show-current` · `git rev-parse HEAD` · `git status` · issue dependencies
+closed · required inputs present. Recorded in the PR's baseline block.
+
+## Firefox baseline verification (baseline-dependent work only)
+Required before Firefox source, build, packaging or compatibility work.
 `git rev-parse HEAD` · `git status` · `git branch --show-current` ·
 `cat browser/config/version.txt` · `cat browser/config/version_display.txt`
 Recorded: remote URL, branch, commit, version files, checkout date, tree-clean state.
 Local tip differing from docs/baselines/firefox-baselines.md → baseline-update entry, never a silent
 replacement.
+Baseline-independent documentation or design work records this section as
+`NOT APPLICABLE — <reason>`; it is never silently omitted.
+Bootstrap exception: Issue #3 creates docs/baselines/firefox-baselines.md from the accepted
+remote-inspection record plus real local checkout evidence; the file's absence is expected
+there and never blocks that issue.
 
 ## Artifact Mode build evidence (every Artifact build claim)
 Source revision · artifact revision · artifact job/platform · artifact timestamp ·

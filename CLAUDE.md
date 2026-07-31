@@ -9,10 +9,18 @@ only implementer-specific procedure. Do not duplicate AGENTS.md content here.
 
 1. Read the approved GitHub issue completely, including linked ADRs and architecture
    sections. If the issue is not approved or references missing ADRs, stop and ask.
-2. Verify the environment against `docs/baselines/firefox-baselines.md`: actual branch, `git rev-parse
-   HEAD`, tree cleanliness, source paths you will touch (multi-source rule), and the
-   build mode (Artifact vs full). Record this in your implementation notes.
-3. Post a short implementation plan on the issue (files, approach, tests, risks)
+2. Verify the repository environment for every issue and record it in your implementation
+   notes: actual branch, `git rev-parse HEAD`, working-tree state, and that the issue's
+   dependencies are closed and its required inputs are present.
+3. Verify the Firefox baseline against `docs/baselines/firefox-baselines.md` — the source
+   paths you will touch (multi-source rule) and the build mode (Artifact vs full) — before
+   any baseline-dependent work: Firefox source, build, packaging, or compatibility work.
+   Baseline-independent documentation or design work records Firefox baseline verification
+   as `NOT APPLICABLE` with a short reason. Bootstrap exception: Issue #3 creates
+   `docs/baselines/firefox-baselines.md` from the accepted remote-inspection record plus
+   real local checkout evidence, so the file's absence is expected there and never blocks
+   that issue.
+4. Post a short implementation plan on the issue (files, approach, tests, risks)
    before writing code. For spikes, the plan is the reading order.
 
 ## While implementing
