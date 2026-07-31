@@ -1,0 +1,30 @@
+name: Source spike
+description: Read-only investigation of the pinned Firefox checkout producing a document
+labels: ["source-spike", "needs-approval"]
+body:
+  - type: input
+    id: spike-ref
+    attributes: { label: Spike reference, description: "e.g. Architecture Pack Section 3 Spike B" }
+    validations: { required: true }
+  - type: textarea
+    id: questions
+    attributes: { label: Questions this spike must answer }
+    validations: { required: true }
+  - type: textarea
+    id: entry-points
+    attributes: { label: Verified starting entry points, description: Paths verified at the pinned commit; guesses prohibited }
+  - type: textarea
+    id: experiment
+    attributes: { label: Minimal experiment, description: "Throwaway; lives under experiments/<issue>/" }
+  - type: textarea
+    id: outputs
+    attributes: { label: Required outputs, description: Doc path, required recommendation set, rebase watch list }
+    validations: { required: true }
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Spike rules acknowledged
+      options:
+        - { label: Doc opens with the source-verification metadata block, required: true }
+        - { label: Experiment code is throwaway and excluded from product paths, required: true }
+        - { label: Recommendation chosen only from the allowed set, required: true }

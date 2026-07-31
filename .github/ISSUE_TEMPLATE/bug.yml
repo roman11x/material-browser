@@ -1,0 +1,23 @@
+name: Bug report
+description: Defect in project code or docs (not upstream Firefox bugs)
+labels: ["bug"]
+body:
+  - type: textarea
+    id: expected
+    attributes: { label: Expected behaviour (cite issue/ADR if applicable) }
+    validations: { required: true }
+  - type: textarea
+    id: actual
+    attributes: { label: Actual behaviour }
+    validations: { required: true }
+  - type: textarea
+    id: repro
+    attributes: { label: Reproduction steps }
+    validations: { required: true }
+  - type: textarea
+    id: env
+    attributes: { label: Environment, description: Baseline commit, build mode, compositor, scaling, profile state }
+    validations: { required: true }
+  - type: textarea
+    id: evidence
+    attributes: { label: Logs / screenshots }
