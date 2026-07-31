@@ -35,7 +35,8 @@ only implementer-specific procedure. Do not duplicate AGENTS.md content here.
 - Open a DRAFT PR from the repository template; fill every section; link issue, ADRs,
   and evidence.
 - Mark ready-for-review only when acceptance criteria are met or explicitly blocked;
-  then request Codex review after CI is ready.
+  then request Codex review after the configured checks complete, or immediately when no
+  CI checks are configured.
 - Address Codex Blockers and Majors with commits, or escalate disagreement per
   escalation.md with your reasoning. Do not ask Codex to write the fix.
 - Never merge. Never modify accepted architecture without an explicit human decision

@@ -43,5 +43,5 @@ body:
     attributes: { label: Human-provided inputs, description: Must exist before work starts }
   - type: dropdown
     id: dependencies-met
-    attributes: { label: Dependencies closed?, options: ["yes", "no — list in comment"] }
+    attributes: { label: "Dependencies closed?", options: ["yes", "no — list in comment"] }
     validations: { required: true }

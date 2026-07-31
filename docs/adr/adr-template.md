@@ -9,8 +9,11 @@
 > <The accepted decision text, quoted exactly. If the decision originates here, write it once —
 > plainly, in the format v1 uses: Context · Decision · Consequences.>
 
-Source: a link to the governing document in `docs/architecture/`, its section, and the ADR number —
-for example: `[`pre-implementation-architecture-v1.md`](../architecture/pre-implementation-architecture-v1.md), "Section 1", ADR-0007.`
+Cite the governing document in `docs/architecture/`, its section, and the ADR number. For example:
+
+```markdown
+Source: [Pre-Implementation Architecture Pack v1](../architecture/pre-implementation-architecture-v1.md), "Section 1 — Architecture Decision Records", ADR-0007.
+```
 
 ## Amendments
 

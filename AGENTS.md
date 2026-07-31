@@ -139,7 +139,8 @@ never silently choose.
 - Draft PR first; use `.github/PULL_REQUEST_TEMPLATE.md` completely.
 - Ready-for-review only when acceptance criteria are met or explicitly marked blocked.
 - PR body links the issue, relevant ADRs, and evidence.
-- Merging is human-only. CI green + human approval are hard gates.
+- Merging is human-only. All configured required status checks must pass. Until CI is
+  configured, documented local validation and human approval are the merge gates.
 
 ## 13. Agent role separation
 
@@ -159,7 +160,9 @@ become architecture. Details: `docs/agents/escalation.md`.
 
 An issue is done when: acceptance criteria demonstrably met · required tests run with
 evidence · documentation updated · conflict watch set updated for touched upstream
-files · Codex blocking findings resolved or human-overruled · CI green · human merged.
+files · Codex blocking findings resolved or human-overruled · all configured required
+status checks pass (before CI exists: issue-required local validation with recorded
+evidence) · human merged.
 
 ## 16. Code Review Rules (Codex)
 

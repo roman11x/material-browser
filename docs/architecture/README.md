@@ -54,12 +54,14 @@ edited. The **generated** operational documents in this repository —
 accepted *Agent Collaboration and Implementation Work Plan v1*, preserved byte-identically at
 [`docs/planning/agent-collaboration-work-plan-v1.md`](../planning/agent-collaboration-work-plan-v1.md).
 
-Two corrections were applied to those generated files under **direct human-owner authority**, and to
+Four corrections were applied to those generated files under **direct human-owner authority**, and to
 those files only. The preserved documents keep the original text.
 
-| Correction | Files affected | Before | After | Authority |
-|---|---|---|---|---|
-| Canonical baseline-record path | `AGENTS.md` §3 and §6; `CLAUDE.md` "Before editing anything" step 2; `docs/agents/evidence-requirements.md`; `docs/planning/milestone-0.md` | `docs/baselines.md` | `docs/baselines/firefox-baselines.md` | Human-owner decision on Issue #1 (2026-07-31) |
-| Issue-template label | `.github/ISSUE_TEMPLATE/source-spike.yml` | `labels: ["spike", "needs-approval"]` | `labels: ["source-spike", "needs-approval"]` | Human-owner decision on Issue #1 (2026-07-31); the repository label is `source-spike` and no `spike` label exists |
+| # | Correction | Files affected | Before | After | Authority |
+|---|---|---|---|---|---|
+| 1 | Canonical baseline-record path | `AGENTS.md` §3 and §6; `CLAUDE.md` "Before editing anything" step 2; `docs/agents/evidence-requirements.md`; `docs/planning/milestone-0.md` | `docs/baselines.md` | `docs/baselines/firefox-baselines.md` | Human-owner decision on Issue #1 (2026-07-31) |
+| 2 | Issue-template label | `.github/ISSUE_TEMPLATE/source-spike.yml` | `labels: ["spike", "needs-approval"]` | `labels: ["source-spike", "needs-approval"]` | Human-owner decision on Issue #1 (2026-07-31); the repository label is `source-spike` and no `spike` label exists |
+| 3 | Quoted dropdown label, so the form parses under both local YAML parsers | `.github/ISSUE_TEMPLATE/implementation.yml` | `{ label: Dependencies closed?, … }` | `{ label: "Dependencies closed?", … }` | Human-owner correction on draft PR #2 (2026-07-31) |
+| 4 | CI bootstrap rule — CI is not an unconditional merge gate while no CI is configured | `AGENTS.md` §12 and §15; `CLAUDE.md` "Validation and PR"; `docs/agents/workflow.md` step 5 and hard rules | "CI green + human approval are hard gates" · "CI green" · "CI runs" · "request Codex review after CI is ready" | "All configured required status checks must pass. Until CI is configured, documented local validation and human approval are the merge gates." Codex review is requested after the configured checks complete, or immediately when none are configured; Codex remains advisory and never a hard GitHub merge gate; human approval remains mandatory | Human-owner correction on draft PR #2 (2026-07-31) |
 
 No other generated file differs from the work plan's proposed text.
